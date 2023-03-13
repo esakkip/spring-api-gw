@@ -16,8 +16,8 @@ public class SpringApiGwApplication {
     @Bean
     public RouteLocator serviceRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route(p -> p.path("/health-record/*").uri("http://localhost:8081/health-record"))
-                .route(p -> p.path("/allergies/*").uri("http://localhost:8082/allergies"))
+                .route(p -> p.path("/api/health-record/*").uri("http://localhost:8081/api/health-record"))
+                .route(p -> p.path("/api/allergies/*").uri("http://localhost:8082/api/allergies"))
                 .build();
     }
 }
